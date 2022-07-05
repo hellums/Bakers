@@ -4,40 +4,41 @@
     {
         var myView = new PercentageView(); //setup
         var myModel = new PercentageModel(); //default
-        //var myModel = new PercentageModel();
         while (true)
         {
             myView.GetValues(myModel, myModel.breadList); //input
             if (!myView.userSelectedExit)
             {
-                switch (myModel.breadList) 
+                switch (myView.Bread) 
                 {
-                    case var _ when myModel.breadList.Contains("Ciabatta"):
+                    case "Ciabatta":
                         myModel = new PercentageModel.Ciabatta();
                         break;
-                    case var _ when myModel.breadList.Contains("Focaccia"):
+                    case "Focaccia":
                         myModel = new PercentageModel.Focaccia();
                         break;
-                    case var _ when myModel.breadList.Contains("Pizza"):
+                    case "Pizza":
                         myModel = new PercentageModel.Pizza();
                         break;
-                    case var _ when myModel.breadList.Contains("Baguette"):
+                    case "Baguette":
                         myModel = new PercentageModel.Baguette();
                         break;
-                    case var _ when myModel.breadList.Contains("Sandwich"):
+                    case "Sandwich":
                         myModel = new PercentageModel.Sandwich();
                         break;
-                    case var _ when myModel.breadList.Contains("Buns"):
+                    case "Buns":
                         myModel = new PercentageModel.Buns();
                         break;
-                    //default:
-                    //    myModel = new PercentageModel.Sandwich();
-                    //    break;
+                    default:
+                        myModel = new PercentageModel.Sandwich();
+                        break;
                 }
                 myModel.Mass = myView.Mass; //processing
                 myModel.Bread = myView.Bread;
                 myModel.CalculateRatio();
                 myView.ShowResults(myModel); //output
+                //myView = new PercentageView();
+                //myModel = new PercentageModel(); //default
             }
             else break;
         }
