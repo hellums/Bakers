@@ -20,11 +20,11 @@
     public void CalculateRatio()
     {
         double TotalPercent = (FlourPercent + WaterPercent + YeastPercent + SaltPercent + SugarPercent + OilPercent) / 100;
-        FlourAmount = (double)(Mass / TotalPercent);
-        WaterAmount = (double)(FlourAmount * (WaterPercent/100));
-        YeastAmount = (double)(WaterAmount * (YeastPercent/100));
-        SaltAmount = (double)(SaltAmount * (SaltPercent/100));
-        SugarAmount = (double)(SugarAmount * (SugarPercent/100));
-        OilAmount = (double)(OilAmount * (OilPercent/100));
+        FlourAmount = Math.Ceiling((double)(Mass / TotalPercent)); //round up to nearest whole number
+        WaterAmount = Math.Ceiling((double)(FlourAmount * (WaterPercent/100)));
+        YeastAmount = Math.Ceiling((double)(FlourAmount * (YeastPercent/100)));
+        SaltAmount = Math.Ceiling((double)(FlourAmount * (SaltPercent/100)));
+        SugarAmount = Math.Ceiling((double)(FlourAmount * (SugarPercent/100)));
+        OilAmount = Math.Ceiling((double)(FlourAmount * (OilPercent/100)));
     }
 }
