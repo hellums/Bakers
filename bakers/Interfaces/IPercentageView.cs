@@ -1,6 +1,5 @@
 ﻿public interface IPercentageView
 {
-    public string? Input { get; set; }
     public int? Mass { get; set; }
     public string? Bread { get; set; }
     public void GetValues(List<string> breadList)
