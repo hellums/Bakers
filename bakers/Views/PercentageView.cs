@@ -1,27 +1,37 @@
 ﻿public class PercentageView : IPercentageView
 {
-    public string? Input { get; set; }  
+    public bool userSelectedExit { get; set; } = false;
     public int? Mass { get; set; }
     public string? Bread { get; set; }
-    public void GetValues(List<string> breadList)
+    public void GetValues(PercentageModel model, List<string>breadList)
     {
-        Console.WriteLine("How many grams of dough do you need? (or 0 to exit)");
-        Input = Console.ReadLine();
-        Mass = Convert.ToInt32(Input);
+        Mass = GetDoughAmount();
+        userSelectedExit = (Mass == 0);
         bool isValidBreadType = false;
+        if (!userSelectedExit) do
+            {
+                Console.WriteLine("\nAvailable bread types include:");
+                foreach (string? style in breadList) { Console.WriteLine(style); }
+                Console.WriteLine("\nWhat type of dough do you need? (or 0 to exit)");
+                Bread = Console.ReadLine();
+                if (Bread == "0") userSelectedExit = true;
+                if (userSelectedExit) break;
+                isValidBreadType = breadList.Contains(Bread);
+                if (!isValidBreadType) Console.WriteLine("\nNot a valid bread type");
+            } while (!(isValidBreadType));
+    }
+
+    private int GetDoughAmount()
+    {
+        int Number;
+        bool isInteger = true;
         do
         {
-            Console.WriteLine("\nAvailable bread types include:");
-            foreach (string? style in breadList) { Console.WriteLine(style); }
-            Console.WriteLine("\nWhat type of dough do you need? (or 0 to exit)");
-            Bread = Console.ReadLine();
-            if (Bread == "0") break;
-            isValidBreadType = breadList.Contains(Bread);
-            if (!(isValidBreadType))
-            {
-                Console.WriteLine("\nNot a valid bread type");
-            }
-        } while (!(isValidBreadType));
+            Console.WriteLine("How many grams of dough do you need? (or 0 to exit)");
+            isInteger = Int32.TryParse(Console.ReadLine(), out Number);
+            if (Number < 0 || !isInteger) Console.WriteLine("\nInvalid amount of dough\n");
+        } while ((Number < 0) || !(isInteger));
+        return (int)Number;
     }
 
     public void ShowResults()
