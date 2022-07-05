@@ -1,8 +1,10 @@
-﻿public class PercentageView : IPercentageView
+﻿using System.Globalization;
+
+public class PercentageView : IPercentageView
 {
     public bool userSelectedExit { get; set; } = false;
     public int? Mass { get; set; }
-    public string? Bread { get; set; }
+    public string? Bread { get; set; } = "";
     public void GetValues(PercentageModel model, List<string>breadList)
     {
         Mass = GetDoughAmount();
@@ -16,7 +18,7 @@
                 Bread = Console.ReadLine();
                 if (Bread == "0") userSelectedExit = true;
                 if (userSelectedExit) break;
-                isValidBreadType = breadList.Contains(Bread);
+                isValidBreadType = breadList.Contains(Bread.ToLower());
                 if (!isValidBreadType) Console.WriteLine("\nNot a valid bread type");
             } while (!(isValidBreadType));
     }
@@ -27,7 +29,7 @@
         bool isInteger = true;
         do
         {
-            Console.WriteLine("How many grams of dough do you need? (or 0 to exit)");
+            Console.WriteLine("\nHow many grams of dough do you need? (or 0 to exit)");
             isInteger = Int32.TryParse(Console.ReadLine(), out Number);
             if (Number < 0 || !isInteger) Console.WriteLine("\nInvalid amount of dough\n");
         } while ((Number < 0) || !(isInteger));
@@ -37,11 +39,11 @@
     {
         Console.WriteLine("\nFor {0} grams of {1}:", model.Mass, model.Bread);
         Console.WriteLine("---------------------------");
-        Console.WriteLine("Flour: {0}", (int)model.FlourAmount);
-        Console.WriteLine("Water: {0}", (int)model.WaterAmount);
-        Console.WriteLine("Yeast: {0}", (int)model.YeastAmount);
-        Console.WriteLine("Salt: {0}", (int)model.SaltAmount);
-        Console.WriteLine("Sugar: {0}", (int)model.SugarAmount);
-        Console.WriteLine("Oil/butter/fat: {0}\n", (int)model.OilAmount);
+        Console.WriteLine("flour: {0}", (int)model.FlourAmount);
+        Console.WriteLine("water: {0}", (int)model.WaterAmount);
+        Console.WriteLine("yeast: {0}", (int)model.YeastAmount);
+        Console.WriteLine("salt: {0}", (int)model.SaltAmount);
+        Console.WriteLine("sugar: {0}", (int)model.SugarAmount);
+        Console.WriteLine("oil/butter/fat: {0}", (int)model.OilAmount);
     }
 }
