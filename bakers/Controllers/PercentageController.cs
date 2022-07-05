@@ -5,14 +5,13 @@
         var myView = new PercentageView(); //setup
         var myModel = new PercentageModel();
 
-        myView.GetValues(myModel.breadList); //input
-
-        myModel.Mass = myView.Mass; //processing
-        myModel.Bread = myView.Bread;
-        myModel.CalculateRatio();
-
-        myView.ShowResults(); //output
-        myView.ShowResults(myModel);
-        myView.ShowResults((double)myModel.Mass, myModel.Bread);
+        myView.GetValues(myModel, myModel.breadList); //input
+        if (!myView.userSelectedExit)
+        {
+            myModel.Mass = myView.Mass; //processing
+            myModel.Bread = myView.Bread;
+            myModel.CalculateRatio();
+            myView.ShowResults(myModel); //output
+        }
     }
 }
