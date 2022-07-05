@@ -33,14 +33,10 @@
         } while ((Number < 0) || !(isInteger));
         return (int)Number;
     }
-
-    public void ShowResults()
-    {
-        Console.WriteLine("\nAmount: {0} Style: {1}\n", Mass, Bread);
-    }
     public void ShowResults(IPercentageModel model)
     {
-        Console.WriteLine("\nFor {0} grams of {1}:\n", model.Mass, model.Bread);
+        Console.WriteLine("\nFor {0} grams of {1}:", model.Mass, model.Bread);
+        Console.WriteLine("---------------------------");
         Console.WriteLine("Flour: {0}", (int)model.FlourAmount);
         Console.WriteLine("Water: {0}", (int)model.WaterAmount);
         Console.WriteLine("Yeast: {0}", (int)model.YeastAmount);
@@ -48,10 +44,4 @@
         Console.WriteLine("Sugar: {0}", (int)model.SugarAmount);
         Console.WriteLine("Oil/butter/fat: {0}\n", (int)model.OilAmount);
     }
-
-    public void ShowResults(double Mass, string Bread)
-    {
-        Console.WriteLine("\nAmount: {0} Style: {1}\n", Mass, Bread);
-    }
-
 }
