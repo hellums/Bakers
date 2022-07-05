@@ -51,6 +51,6 @@ public class PercentageView : IPercentageView
 
     public void Goodbye()
     {
-        Console.WriteLine("\n Don't have a good day. Have a GREAT day!");
+        Console.WriteLine("\nDon't have a good day. Have a GREAT day!");
     }
 }
