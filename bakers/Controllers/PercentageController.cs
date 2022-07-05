@@ -11,22 +11,22 @@
             {
                 switch (myView.Bread) 
                 {
-                    case "Ciabatta":
+                    case "ciabatta":
                         myModel = new PercentageModel.Ciabatta();
                         break;
-                    case "Focaccia":
+                    case "focaccia":
                         myModel = new PercentageModel.Focaccia();
                         break;
-                    case "Pizza":
+                    case "pizza":
                         myModel = new PercentageModel.Pizza();
                         break;
-                    case "Baguette":
+                    case "baguette":
                         myModel = new PercentageModel.Baguette();
                         break;
-                    case "Sandwich":
+                    case "sandwich":
                         myModel = new PercentageModel.Sandwich();
                         break;
-                    case "Buns":
+                    case "buns":
                         myModel = new PercentageModel.Buns();
                         break;
                     default:
@@ -42,5 +42,6 @@
             }
             else break;
         }
+        myView.Goodbye();
     }
 }

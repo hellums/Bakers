@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Reflection;
 
 public class PercentageView : IPercentageView
 {
@@ -42,8 +43,13 @@ public class PercentageView : IPercentageView
         Console.WriteLine("flour: {0}", (int)model.FlourAmount);
         Console.WriteLine("water: {0}", (int)model.WaterAmount);
         Console.WriteLine("yeast: {0}", (int)model.YeastAmount);
-        Console.WriteLine("salt: {0}", (int)model.SaltAmount);
-        Console.WriteLine("sugar: {0}", (int)model.SugarAmount);
-        Console.WriteLine("oil/butter/fat: {0}", (int)model.OilAmount);
+        if ((int)model.SaltAmount > 0) Console.WriteLine("salt: {0}", (int)model.SaltAmount);
+        if ((int)model.SugarAmount > 0) Console.WriteLine("sugar: {0}", (int)model.SugarAmount);
+        if ((int)model.OilAmount > 0) Console.WriteLine("oil/butter/fat: {0}", (int)model.OilAmount);
+    }
+
+    public void Goodbye()
+    {
+        Console.WriteLine("\nDon't have a good day. Have a GREAT day!");
     }
 }
