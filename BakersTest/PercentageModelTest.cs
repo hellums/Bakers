@@ -1,0 +1,124 @@
+﻿namespace BakersTest
+{
+    [TestClass]
+    public class PercentageModelTest
+    {
+        private PercentageModel testModel;
+
+        [TestMethod]
+        public void CiabattaIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Ciabatta();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 542);
+            Assert.AreEqual(testModel.WaterAmount, 445);
+            Assert.AreEqual(testModel.YeastAmount, 3);
+            Assert.AreEqual(testModel.SaltAmount, 12);
+            Assert.AreEqual(testModel.SugarAmount, 0);
+            Assert.AreEqual(testModel.OilAmount, 0);
+        }
+
+        [TestMethod]
+        public void SandwichIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Sandwich();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 566);
+            Assert.AreEqual(testModel.WaterAmount, 357);
+            Assert.AreEqual(testModel.YeastAmount, 7);
+            Assert.AreEqual(testModel.SaltAmount, 6);
+            Assert.AreEqual(testModel.SugarAmount, 20);
+            Assert.AreEqual(testModel.OilAmount, 46);
+        }
+        [TestMethod]
+        public void FocacciaIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Focaccia();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 492);
+            Assert.AreEqual(testModel.WaterAmount, 443);
+            Assert.AreEqual(testModel.YeastAmount, 4);
+            Assert.AreEqual(testModel.SaltAmount, 18);
+            Assert.AreEqual(testModel.SugarAmount, 0);
+            Assert.AreEqual(testModel.OilAmount, 47);
+        }
+        [TestMethod]
+        public void PizzaIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Pizza();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 615);
+            Assert.AreEqual(testModel.WaterAmount, 363);
+            Assert.AreEqual(testModel.YeastAmount, 8);
+            Assert.AreEqual(testModel.SaltAmount, 13);
+            Assert.AreEqual(testModel.SugarAmount, 0);
+            Assert.AreEqual(testModel.OilAmount, 4);
+        }
+        [TestMethod]
+        public void BaguetteIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Baguette();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 591);
+            Assert.AreEqual(testModel.WaterAmount, 391);
+            Assert.AreEqual(testModel.YeastAmount, 8);
+            Assert.AreEqual(testModel.SaltAmount, 12);
+            Assert.AreEqual(testModel.SugarAmount, 0);
+            Assert.AreEqual(testModel.OilAmount, 0);
+        }
+        [TestMethod]
+        public void BunsIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Buns();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 565);
+            Assert.AreEqual(testModel.WaterAmount, 373);
+            Assert.AreEqual(testModel.YeastAmount, 12);
+            Assert.AreEqual(testModel.SaltAmount, 9);
+            Assert.AreEqual(testModel.SugarAmount, 15);
+            Assert.AreEqual(testModel.OilAmount, 29);
+        }
+    }
+}
