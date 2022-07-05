@@ -19,7 +19,8 @@ public class PercentageView : IPercentageView
                 Bread = Console.ReadLine();
                 if (Bread == "0") userSelectedExit = true;
                 if (userSelectedExit) break;
-                isValidBreadType = breadList.Contains(Bread.ToLower());
+                Bread = Bread.ToLower();
+                isValidBreadType = breadList.Contains(Bread);
                 if (!isValidBreadType) Console.WriteLine("\nNot a valid bread type");
             } while (!(isValidBreadType));
     }
