@@ -37,8 +37,6 @@
                 myModel.Bread = myView.Bread;
                 myModel.CalculateRatio();
                 myView.ShowResults(myModel); //output
-                //myView = new PercentageView();
-                //myModel = new PercentageModel(); //default
             }
             else break;
         }
