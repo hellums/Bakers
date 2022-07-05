@@ -1,0 +1,15 @@
+————————
+Log Entry: 4:24:22 PM Tuesday, July 5, 2022
+...program started
+————————
+Log Entry: 4:24:37 PM Tuesday, July 5, 2022
+...user entered invalid bread type: chabata
+————————
+Log Entry: 4:24:44 PM Tuesday, July 5, 2022
+...user entered invalid bread type: 1000
+————————
+Log Entry: 4:24:49 PM Tuesday, July 5, 2022
+...user entered invalid bread type: ciabata
+————————
+Log Entry: 4:24:51 PM Tuesday, July 5, 2022
+...user selected to exit menu

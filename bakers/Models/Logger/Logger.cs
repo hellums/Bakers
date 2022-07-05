@@ -11,7 +11,6 @@
             this.CurrentDirectory = Directory.GetCurrentDirectory();
             this.FileName = "bakersLog.txt";
             this.FilePath = this.CurrentDirectory + "/" + this.FileName;
-            Console.WriteLine(this.FilePath);
         }
 
         public override void Log(string Message)
@@ -19,9 +18,9 @@
             using (System.IO.StreamWriter w = System.IO.File.AppendText(this.FilePath)) 
                 {
                     w.WriteLine("————————");
-                    w.Write("\r\nLog Entry: ");
+                    w.Write("Log Entry: ");
                     w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
-                    w.WriteLine("  :{0}", Message);
+                    w.WriteLine("...{0}", Message);
                 }
         }
     }

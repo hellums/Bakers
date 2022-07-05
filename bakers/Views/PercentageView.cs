@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using bakers.Models.Logger;
+using System.Globalization;
 using System.Reflection;
 
 public class PercentageView : IPercentageView
@@ -8,6 +9,7 @@ public class PercentageView : IPercentageView
     public string? Bread { get; set; } = "";
     public void GetValues(PercentageModel model, List<string>breadList)
     {
+        var logger = new Logger();
         Mass = GetDoughAmount();
         userSelectedExit = (Mass == 0);
         bool isValidBreadType = false;
@@ -21,7 +23,12 @@ public class PercentageView : IPercentageView
                 if (userSelectedExit) break;
                 Bread = Bread.ToLower();
                 isValidBreadType = breadList.Contains(Bread);
-                if (!isValidBreadType) Console.WriteLine("\nNot a valid bread type");
+                if (!isValidBreadType)
+                {
+                    logger.Log("user entered invalid bread type: " + Bread);
+                    Console.WriteLine("\nNot a valid bread type");
+                }
+                    
             } while (!(isValidBreadType));
     }
 
