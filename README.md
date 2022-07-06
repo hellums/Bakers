@@ -7,7 +7,6 @@ Bread models are derived from the base model class and methods, with polymorphic
 <img src="https://user-images.githubusercontent.com/83464025/177398099-cda76add-710c-4258-b5a5-2a5f94460e79.png">
 
 ## Instructions
-You can use Docker to pull and run the [Bakers image on Docker Hub](https://hub.docker.com/r/hellums/bakers)
 
 To clone and run the program on your local system, do the following:
 
