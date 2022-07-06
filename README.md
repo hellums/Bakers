@@ -5,7 +5,22 @@ This console app calculates total amount of ingredients needed for different typ
 <img src="https://user-images.githubusercontent.com/83464025/177398099-cda76add-710c-4258-b5a5-2a5f94460e79.png">
 
 cloning)
- 
+
+ePortfolio)
+
+## Instructions
+You can use Docker to pull and run the [Bakers image on Docker Hub](https://hub.docker.com/r/hellums/bakers)
+
+To clone and run the program on your local system, do the following:
+
+- create a new folder, such as "test", then run these commands
+- > cd test
+- > git clone https://github.com/hellums/bakers.git
+- > cd bakers
+- > dotnet run
+
+You can also use Visual Studio to run from the IDE by loading the bakers.sln file in that folder, after cloning
+
 ## Code Louisville Requirements List
 - [X] Project includes a README file that explains the following:
   - [X] A one paragraph or longer description of what your project is about
