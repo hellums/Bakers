@@ -3,3 +3,18 @@ This is the MVC interface-based console app version of my Baker's Percentage Bla
 
 ## Sample Output
 <img src="https://user-images.githubusercontent.com/83464025/177398099-cda76add-710c-4258-b5a5-2a5f94460e79.png">
+
+cloning)
+ 
+## Code Louisville Requirements List
+- [X] Project includes a README file that explains the following:
+  - [X] A one paragraph or longer description of what your project is about
+  - [X] Any special instructions required for the reviewer to run your project
+- [X] Implement a “master loop” console application, including choosing to exit the program
+- [X] Create at least one class and object instance with populated data used in the application
+- [X] Create an additional class which inherits one or more properties from its parent
+- [X] Create and call at least 3 functions or methods, at least one of which returns a value used in the application
+- [X] Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
+- [X] Implement a log that records errors, invalid inputs, or other important events and writes them to a text file
+- [X] Build a conversion tool that converts user input to another type and displays the results
+- [X] Create 3 or more unit tests
