@@ -38,6 +38,7 @@ public class PercentageController : IPercentageController
                         break;
                 }
                 myModel.Mass = myView.Mass; //processing
+                if (myView.Bread == null) Environment.FailFast("Console read of bread variable failed");
                 myModel.Bread = myView.Bread;
                 myModel.CalculateRatio();
                 myView.ShowResults(myModel); //output
