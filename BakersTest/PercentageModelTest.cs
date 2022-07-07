@@ -3,7 +3,7 @@
     [TestClass]
     public class PercentageModelTest
     {
-        private PercentageModel testModel;
+        private PercentageModel testModel = new PercentageModel();
 
         [TestMethod]
         public void CiabattaIngredientsCorrect()
