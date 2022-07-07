@@ -8,7 +8,7 @@
     public double? SaltAmount { get; set; }
     public double? SugarAmount { get; set; }
     public double? OilAmount { get; set; }
-    public virtual double FlourPercent { get; set; } = 100;
+    public virtual double? FlourPercent { get; set; } = 100;
     public virtual double? WaterPercent { get; set; }
     public virtual double? YeastPercent { get; set; }
     public virtual double? SaltPercent { get; set; }
