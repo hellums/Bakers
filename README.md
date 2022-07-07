@@ -31,3 +31,4 @@ You can also use Visual Studio to run from the IDE by loading the bakers.sln fil
 - [X] Implement a [log that records errors](https://github.com/hellums/bakers/blob/0a81141147874d55a5204060c133c755710801c0/bakers/Models/Logger/Logger.cs#L16), invalid inputs, or other important events and writes them to a text file
 - [X] Build a [conversion tool](https://github.com/hellums/bakers/blob/0a81141147874d55a5204060c133c755710801c0/bakers/Models/PercentageModel.cs#L20) that converts user input to another type and displays the results
 - [X] Create [3 or more unit tests](https://github.com/hellums/bakers/blob/0a81141147874d55a5204060c133c755710801c0/BakersTest/PercentageModelTest.cs#L4)
+- [X] Uses [interfaces and MVC architecture](https://github.com/hellums/bakers/blob/5aad293bc22abdc7f0d699225554acb3071999c0/bakers/Controllers/PercentageController.cs#L3) to separate UI from business logic and data layer
