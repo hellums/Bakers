@@ -2,18 +2,18 @@
 {
     public int? Mass { get; set; }
     public string? Bread { get; set; }
-    public double FlourAmount { get; set; }
-    public double WaterAmount { get; set; }
-    public double YeastAmount { get; set; }
-    public double SaltAmount { get; set; }
-    public double SugarAmount { get; set; }
-    public double OilAmount { get; set; }
+    public double? FlourAmount { get; set; }
+    public double? WaterAmount { get; set; }
+    public double? YeastAmount { get; set; }
+    public double? SaltAmount { get; set; }
+    public double? SugarAmount { get; set; }
+    public double? OilAmount { get; set; }
     public virtual double FlourPercent { get; set; } = 100;
-    public virtual double WaterPercent { get; set; }
-    public virtual double YeastPercent { get; set; }
-    public virtual double SaltPercent { get; set; }
-    public virtual double SugarPercent { get; set; }
-    public virtual double OilPercent { get; set; }
+    public virtual double? WaterPercent { get; set; }
+    public virtual double? YeastPercent { get; set; }
+    public virtual double? SaltPercent { get; set; }
+    public virtual double? SugarPercent { get; set; }
+    public virtual double? OilPercent { get; set; }
     public List<string> breadList { get; set; } = new List<string>
         { "ciabatta", "focaccia", "pizza", "baguette", "sandwich", "buns" };
 
