@@ -6,7 +6,7 @@ public class PercentageView : IPercentageView
 {
     public bool userSelectedExit { get; set; } = false;
     public int Mass { get; set; } = 0;
-    public string Bread { get; set; } = "";
+    public string? Bread { get; set; } = "";
     public void GetValues(PercentageModel model, List<string>breadList)
     {
         var logger = new Logger();
@@ -21,6 +21,7 @@ public class PercentageView : IPercentageView
                 Bread = Console.ReadLine();
                 if (Bread == "0") userSelectedExit = true;
                 if (userSelectedExit) break;
+                if (Bread == null) Bread = "Sandwich";
                 Bread = Bread.ToLower();
                 isValidBreadType = breadList.Contains(Bread);
                 if (!isValidBreadType)
