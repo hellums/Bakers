@@ -1,19 +1,19 @@
 ﻿public partial class PercentageModel : IPercentageModel
 {
-    public int? Mass { get; set; }
-    public string? Bread { get; set; }
-    public double? FlourAmount { get; set; }
-    public double? WaterAmount { get; set; }
-    public double? YeastAmount { get; set; }
-    public double? SaltAmount { get; set; }
-    public double? SugarAmount { get; set; }
-    public double? OilAmount { get; set; }
-    public virtual double? FlourPercent { get; set; } = 100;
-    public virtual double? WaterPercent { get; set; }
-    public virtual double? YeastPercent { get; set; }
-    public virtual double? SaltPercent { get; set; }
-    public virtual double? SugarPercent { get; set; }
-    public virtual double? OilPercent { get; set; }
+    public int Mass { get; set; } = 0;
+    public string Bread { get; set; } = "";
+    public double FlourAmount { get; set; } = 0.0;
+    public double WaterAmount { get; set; } = 0.0;
+    public double YeastAmount { get; set; } = 0.0;
+    public double SaltAmount { get; set; } = 0.0;
+    public double SugarAmount { get; set; } = 0.0;
+    public double OilAmount { get; set; } = 0.0;
+    public virtual double FlourPercent { get; set; } = 100.0;
+    public virtual double WaterPercent { get; set; } = 0.0;
+    public virtual double YeastPercent { get; set; } = 0.0;
+    public virtual double SaltPercent { get; set; } = 0.0;
+    public virtual double SugarPercent { get; set; } = 0.0;
+    public virtual double OilPercent { get; set; } = 0.0;
     public List<string> breadList { get; set; } = new List<string>
         { "ciabatta", "focaccia", "pizza", "baguette", "sandwich", "buns" };
 

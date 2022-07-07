@@ -5,8 +5,8 @@ using System.Reflection;
 public class PercentageView : IPercentageView
 {
     public bool userSelectedExit { get; set; } = false;
-    public int? Mass { get; set; }
-    public string? Bread { get; set; } = "";
+    public int Mass { get; set; } = 0;
+    public string Bread { get; set; } = "";
     public void GetValues(PercentageModel model, List<string>breadList)
     {
         var logger = new Logger();
