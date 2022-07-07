@@ -14,6 +14,7 @@ To clone and run the program on your local system, do the following:
 - > cd test
 - > git clone https://github.com/hellums/bakers.git
 - > cd bakers
+- > cd bakers
 - > dotnet run
 
 You can also use Visual Studio to run from the IDE by loading the bakers.sln file in that folder, after cloning
