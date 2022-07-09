@@ -120,5 +120,24 @@
             Assert.AreEqual(testModel.SugarAmount, 15);
             Assert.AreEqual(testModel.OilAmount, 29);
         }
+        [TestMethod]
+        public void RollsIngredientsCorrect()
+        {
+            //Arrange
+            testModel = new PercentageModel.Rolls();
+            testModel.Mass = 1000;
+
+            //Act
+            testModel.CalculateRatio();
+
+            //Assert
+            Assert.AreEqual(testModel.Mass, 1000);
+            Assert.AreEqual(testModel.FlourAmount, 545);
+            Assert.AreEqual(testModel.WaterAmount, 327);
+            Assert.AreEqual(testModel.YeastAmount, 13);
+            Assert.AreEqual(testModel.SaltAmount, 8);
+            Assert.AreEqual(testModel.SugarAmount, 55);
+            Assert.AreEqual(testModel.OilAmount, 55);
+        }
     }
 }
