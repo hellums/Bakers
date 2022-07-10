@@ -15,7 +15,7 @@
     public virtual double SugarPercent { get; set; } = 0.0;
     public virtual double OilPercent { get; set; } = 0.0;
     public List<string> breadList { get; set; } = new List<string>
-        { "ciabatta", "focaccia", "pizza", "baguette", "sandwich", "buns", "rolls"};
+        { "ciabatta", "focaccia", "pizza", "baguette", "sandwich", "buns", "rolls", "dumplings"};
 
     public void CalculateRatio()
     {

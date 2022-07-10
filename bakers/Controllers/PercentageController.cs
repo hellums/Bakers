@@ -36,6 +36,9 @@ public class PercentageController : IPercentageController
                     case "rolls":
                         myModel = new PercentageModel.Rolls();
                         break;
+                    case "dumplings":
+                        myModel = new PercentageModel.Dumplings();
+                        break;
                     default:
                         myModel = new PercentageModel.Sandwich();
                         break;
