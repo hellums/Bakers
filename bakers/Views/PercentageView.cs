@@ -51,7 +51,7 @@ public class PercentageView : IPercentageView
         Console.WriteLine("  ---------------------------");
         Console.WriteLine("  flour: {0}", (int)model.FlourAmount);
         Console.WriteLine("  water: {0}", (int)model.WaterAmount);
-        Console.WriteLine("  yeast: {0}", (int)model.YeastAmount);
+        if ((int)model.YeastAmount > 0) Console.WriteLine("  yeast: {0}", (int)model.YeastAmount);
         if ((int)model.SaltAmount > 0) Console.WriteLine("  salt: {0}", (int)model.SaltAmount);
         if ((int)model.SugarAmount > 0) Console.WriteLine("  sugar: {0}", (int)model.SugarAmount);
         if ((int)model.OilAmount > 0) Console.WriteLine("  oil/butter/fat: {0}", (int)model.OilAmount);
