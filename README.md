@@ -4,7 +4,7 @@ This console app calculates total amount of ingredients needed for different typ
 Bread models are derived from the base model class and methods, with polymorphic properties for individual ingredient percentages. It is the MVC and interface-based version of my Baker's Percentage Blazor component and API.
 
 ## Sample Output
-<img src="https://user-images.githubusercontent.com/83464025/177398099-cda76add-710c-4258-b5a5-2a5f94460e79.png">
+<img src="https://user-images.githubusercontent.com/83464025/178148617-b4830893-7e1b-4b18-914f-d10cad6e7f59.png">
 
 ## Instructions
 
