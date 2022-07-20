@@ -3,14 +3,16 @@
     [TestClass]
     public class PercentageModelTest
     {
-        private PercentageModel testModel = new PercentageModel();
+        private PercentageModel testModel = new();
 
         [TestMethod]
         public void CiabattaIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Ciabatta();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Ciabatta
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -29,8 +31,10 @@
         public void SandwichIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Sandwich();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Sandwich
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -48,8 +52,10 @@
         public void FocacciaIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Focaccia();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Focaccia
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -67,8 +73,10 @@
         public void PizzaIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Pizza();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Pizza
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -86,8 +94,10 @@
         public void BaguetteIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Baguette();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Baguette
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -105,8 +115,10 @@
         public void BunsIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Buns();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Buns
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -124,8 +136,10 @@
         public void RollsIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Rolls();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Rolls
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
@@ -143,8 +157,10 @@
         public void DumplingsIngredientsCorrect()
         {
             //Arrange
-            testModel = new PercentageModel.Dumplings();
-            testModel.Mass = 1000;
+            testModel = new PercentageModel.Dumplings
+            {
+                Mass = 1000
+            };
 
             //Act
             testModel.CalculateRatio();
