@@ -8,16 +8,17 @@ Bread models are derived from the base model class and methods, with polymorphic
 
 ## Instructions
 
-To clone and run the program on your local system, do the following:
+To clone and run the tests and program on your local system, do the following:
 
 - create a new folder, such as "test", then run these commands
 - > cd test
 - > git clone https://github.com/hellums/bakers.git
 - > cd bakers
+- > dotnet test
 - > cd bakers
 - > dotnet run
 
-You can also use Visual Studio to run from the IDE by loading the bakers.sln file in that folder, after cloning
+You can also use Visual Studio to run the tests and program from the IDE by loading the bakers.sln file in that folder, after cloning. To clean up, just return to the folder where you created test and remove that test folder using del test (Windows) or rm -rf test (Mac or Linux).
 
 ## Code Louisville Requirements List
 - [X] Project includes a [README file](https://github.com/hellums/bakers/blob/root/README.md) that explains the following:
