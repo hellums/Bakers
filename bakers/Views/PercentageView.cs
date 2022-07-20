@@ -1,8 +1,4 @@
-﻿using bakers.Models.Logger;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
-using System.Globalization;
-using System.Reflection;
-using Logger = bakers.Models.Logger.Logger;
+﻿using Logger = bakers.Models.Logger.Logger;
 
 public class PercentageView : IPercentageView
 {
@@ -14,16 +10,17 @@ public class PercentageView : IPercentageView
         var logger = new Logger();
         Mass = GetDoughAmount();
         userSelectedExit = (Mass == 0);
-        bool isValidBreadType = false;
+        bool isValidBreadType;
         if (!userSelectedExit) do
             {
                 Console.WriteLine("\nAvailable bread types include:");
                 foreach (string? style in breadList) { Console.WriteLine(style); }
                 Console.Write("\nWhat type of dough do you need (or 0 to exit)? ");
+                
                 Bread = Console.ReadLine();
                 if (Bread == "0") userSelectedExit = true;
                 if (userSelectedExit) break;
-                if (Bread == null) Bread = "Sandwich";
+                if (Bread == null) Bread = "Sandwich"; //failover to sandwich if needed
                 Bread = Bread.ToLower();
                 isValidBreadType = breadList.Contains(Bread);
                 if (!isValidBreadType)
