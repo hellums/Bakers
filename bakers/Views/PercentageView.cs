@@ -1,6 +1,8 @@
 ﻿using bakers.Models.Logger;
+using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using System.Globalization;
 using System.Reflection;
+using Logger = bakers.Models.Logger.Logger;
 
 public class PercentageView : IPercentageView
 {
@@ -35,13 +37,18 @@ public class PercentageView : IPercentageView
 
     private int GetDoughAmount()
     {
+        var logger = new Logger();
         int Number;
         bool isInteger = true;
         do
         {
             Console.Write("\nHow many grams of dough do you need (or 0 to exit)? ");
             isInteger = Int32.TryParse(Console.ReadLine(), out Number);
-            if (Number < 0 || !isInteger) Console.WriteLine("\nInvalid amount of dough\n");
+            if (Number < 0 || !isInteger)
+            {
+                logger.Log("user entered invalid dough amount: " + Number);
+                Console.WriteLine("\nInvalid amount of dough\n");
+            }
         } while ((Number < 0) || !(isInteger));
         return (int)Number;
     }
