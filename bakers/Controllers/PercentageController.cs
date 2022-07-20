@@ -6,8 +6,8 @@ public class PercentageController : IPercentageController
     {
         var logger = new Logger();
         logger.Log("program started");
-        var myView = new PercentageView(); //setup
-        var myModel = new PercentageModel(); //default
+        var myView = new PercentageView();
+        var myModel = new PercentageModel();
         while (true)
         {
             myView.GetValues(myModel, myModel.breadList); //input
@@ -44,7 +44,11 @@ public class PercentageController : IPercentageController
                         break;
                 }
                 myModel.Mass = myView.Mass; //processing
-                if (myView.Bread == null) Environment.FailFast("Console read of bread variable failed");
+                if (myView.Bread == null)
+                {
+                    logger.Log("bread type came back null from user menu selection");
+                    Environment.FailFast("Console read of bread variable failed");
+                }
                 myModel.Bread = myView.Bread;
                 myModel.CalculateRatio();
                 myView.ShowResults(myModel); //output
