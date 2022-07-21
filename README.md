@@ -1,7 +1,7 @@
 # Bakers Percentage
 This console app calculates total amount of ingredients needed for different types of bread, based on target weight of dough (vs. volume, for more consistent results). It uses "Baker's Percentage" for each available bread type, where each ingredient is calculated as a percentage of the total Flour. 
 
-Bread models are derived from the base model class and methods, with polymorphic properties for individual ingredient percentages. It is the MVC and interface-based version of my Baker's Percentage Blazor component and API.
+Bread models are derived from the base model class and methods, with polymorphic properties for individual ingredient percentages. It is the MVC, interface, and console-based version of my Baker's Percentage Blazor component and API.
 
 ## Sample Output
 <img src="https://user-images.githubusercontent.com/83464025/178148617-b4830893-7e1b-4b18-914f-d10cad6e7f59.png">
@@ -18,7 +18,7 @@ To clone and run the tests and program on your local system, do the following:
 - > cd bakers
 - > dotnet run
 
-You can also use Visual Studio to run the tests and program from the IDE by loading the bakers.sln file in that folder, after cloning. To clean up, just return to the folder where you created test and remove that test folder using del test (Windows) or rm -rf test (Mac or Linux).
+You can also use Visual Studio to run the tests and program from the IDE by loading the bakers.sln file in that folder, after cloning. To clean up, just return to the folder where you created test and remove that test folder using rmdir /q /s test (Windows) or rm -rf test (Mac or Linux).
 
 ## Code Louisville Requirements List
 - [X] Project includes a [README file](https://github.com/hellums/bakers/blob/root/README.md) that explains the following:
